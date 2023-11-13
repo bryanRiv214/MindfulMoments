@@ -1,0 +1,151 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #ebd8d0;
+    margin: 0;
+    padding-top: 80px; /* Adjust based on the height of your header */
+    display: flex;
+    flex-direction: column; /* Aligns elements vertically */
+    align-items: center;
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FEF6E4;
+    padding: 10px 30px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.mindful-moments {
+    font-size: 24px;
+    color: black;
+    margin-left: 30px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li:last-child {
+    margin-right: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+}
+  
+  /* Main heading style */
+  h1 {
+    color: #333;
+  }
+  
+  /* Style for the input field */
+  textarea,
+  .input-group input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: inherit;
+  }
+
+  .container {
+    max-width: 600px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Style for buttons */
+  button {
+    background: #5cb85c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  /* Button hover effect */
+  button:hover {
+    background: #4cae4c;
+  }
+  
+  /* The hidden class is used to hide elements */
+  .hidden {
+    display: none;
+  }
+  
+  /* Style for the conditions box */
+  .conditions-box {
+    margin-top: 30px;
+    padding: 20px;
+    background: #e7f5fe;
+    border: 1px solid #b6e0fb;
+    border-radius: 8px;
+  }
+  
+  /* Style for each input group container */
+  .input-group {
+    margin-bottom: 15px;
+  }
+  
+  /* Style for the labels in the input group */
+  .input-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  /* Style for input elements */
+  .input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  /* Style for each condition list item */
+  .condition-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+  }
+  
+  /* Style for the delete button */
+  .delete-btn {
+    background: #d9534f; 
+    color: white; 
+    border: none;
+    padding: 5px 10px; 
+    border-radius: 4px; 
+    cursor: pointer; 
+    margin-left: auto;
+  }
+  
+  /* Delete button hover effect */
+  .delete-btn:hover {
+    background: #c9302c; 
+  }
