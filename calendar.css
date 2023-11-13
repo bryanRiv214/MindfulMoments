@@ -1,53 +1,75 @@
-/* Import Google font - Poppins */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-}
 body {
-  height: 100vh;
+  font-family: 'Poppins', sans-serif;
   background-color: #ebd8d0;
+  margin: 0;
+  padding-top: 80px;
+  /* Adjust based on the height of your header */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-nav{
-  height: 50px;
+header {
   display: flex;
   justify-content: space-between;
-  background-color:#FEF6E4;
-  margin-bottom: 40px;
-  padding-left: 30px;
-  padding-top:10px;
-  padding-right:30px;
+  align-items: center;
+  background-color: #FEF6E4;
+  padding: 10px 30px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
 }
 
-nav li{
-  display: inline;
+.mindful-moments {
+  font-size: 24px;
+  color: black;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
   margin-left: 20px;
 }
 
-nav ul a{
-  text-decoration: none;
-  color:black;
+nav ul li:last-child {
+  margin-right: 60px;
 }
+
+nav ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+section{
+  display: flex;
+  justify-content:space-evenly;
+  margin-top: 40px;
+}
+
 .wrapper {
-  margin: auto;
   width: 450px;
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
 }
-.wrapper header {
+
+.wrapper .header {
   display: flex;
   align-items: center;
   padding: 25px 30px 10px;
   justify-content: space-between;
 }
-header .icons {
+.header .icons {
   display: flex;
 }
-header .icons span {
+.header .icons span {
   height: 38px;
   width: 38px;
   margin: 0 1px;
@@ -62,10 +84,10 @@ header .icons span {
 .icons span:last-child {
   margin-right: -10px;
 }
-header .icons span:hover {
+.header .icons span:hover {
   background: #f2f2f2;
 }
-header .current-date {
+.header .current-date {
   font-size: 1.45rem;
   font-weight: 500;
 }
@@ -80,6 +102,11 @@ header .current-date {
 }
 .calendar .days {
   margin-bottom: 20px;
+  padding-left: 0px;
+}
+
+.calendar .weeks{
+  padding-left: 0px;
 }
 .calendar li {
   color: #333;
@@ -118,4 +145,98 @@ header .current-date {
 }
 .days li:not(.active):hover::before {
   background: #f2f2f2;
+}
+
+/* Add a media query for smaller screens */
+@media screen and (max-width: 600px) {
+  .wrapper {
+    margin: auto;
+    width: 350px;
+  }
+
+  section {
+    flex-direction: column;
+    /* Center items horizontally on smaller screens */
+  }
+
+  .recent-entries {
+    margin-top: 40px;
+  }
+}
+
+
+.recent-entries #title {
+  text-align: center;
+}
+
+.entries{
+list-style: none;
+padding:0px;
+}
+
+.entry-title{
+  margin-left: 0px;
+  width: 100%;
+}
+
+.entry-title {
+  appearance: none;
+  background-color: #FAFBFC;
+  border: 1px solid rgba(27, 31, 35, 0.15);
+  border-radius: 6px;
+  box-shadow: rgba(27, 31, 35, 0.04) 0 1px 0, rgba(255, 255, 255, 0.25) 0 1px 0 inset;
+  box-sizing: border-box;
+  color: #24292E;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  list-style: none;
+  padding: 6px 16px;
+  position: relative;
+  transition: background-color 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+  word-wrap: break-word;
+  width: 500px;
+}
+
+.entry-title:hover {
+  background-color: #F3F4F6;
+  text-decoration: none;
+  transition-duration: 0.1s;
+}
+
+.entry-title:disabled {
+  background-color: #FAFBFC;
+  border-color: rgba(27, 31, 35, 0.15);
+  color: #959DA5;
+  cursor: default;
+}
+
+.entry-title:active {
+  background-color: #EDEFF2;
+  box-shadow: rgba(225, 228, 232, 0.2) 0 1px 0 inset;
+  transition: none 0s;
+}
+
+.entry-title:focus {
+  outline: 1px transparent;
+}
+
+.entry-title:before {
+  display: none;
+}
+
+.entry-title:-webkit-details-marker {
+  display: none;
+}
+
+.entry-date{
+  text-align: center;
 }
