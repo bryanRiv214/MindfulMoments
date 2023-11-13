@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	// Check if the entered credentials match the hard-coded ones
     if (username === hardcodedUsername && password === hardcodedPassword) {
       // Redirect to 'index.html' on successful login
-      window.location.href = 'index.html';
+      window.location.href = 'home.html';
     } else {
 	  // Show an alert if the credentials are incorrect
       alert('Incorrect username or password. Please try again.');

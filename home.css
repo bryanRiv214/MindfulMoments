@@ -48,6 +48,10 @@ nav ul li a {
     color: black;
 }
 
+.active{
+    font-weight:700;
+}
+
 .feeling-today-section {
     text-align: center;
     width: 100%;
