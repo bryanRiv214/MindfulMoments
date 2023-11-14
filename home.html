@@ -30,20 +30,22 @@
     <div class="container">
 		<!-- Form container for user input -->
         <form id="entry-form">
-            <div class="input-group horizontal">
+            <div class="input-group">
 				<!-- Group of event buttons for user to select -->
-                <label>What happened?</label>
-			    <button type="button" id="anxiety" name="event" value="Anxiety">Anxiety</button>
-			    <button type="button" id="panic-attack" name="event" value="Panic Attack">Panic Attack</button>
-			    <button type="button" id="dissociation" name="event" value="Dissociation">Dissociation</button>
-			    <button type="button" id="add-more" name="event">+</button>
+                <label for="cause">What happened?</label>
+                <div id="cause" name="cause">
+                    <button type="button" id="anxiety" name="event" value="Anxiety">Anxiety</button>
+                    <button type="button" id="panic-attack" name="event" value="Panic Attack">Panic Attack</button>
+                    <button type="button" id="dissociation" name="event" value="Dissociation">Dissociation</button>
+                    <button type="button" id="add-more" name="event">+</button>
+                </div>
             </div>
 			
 			<!-- Input fields for various aspects of the user's experience -->
 
             <div class="input-group">
                 <label for="when">When?</label>
-                <input type="text" id="when" name="when">
+                <input type="date" id="when" name="when">
             </div>
 
             <div class="input-group">

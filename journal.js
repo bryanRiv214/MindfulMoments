@@ -1,6 +1,7 @@
-const currentDate = document.querySelector(".current-date"),
-  daysTag = document.querySelector(".days"),
-  prevNextIcon = document.querySelectorAll(".icons span");
+const currentDate = document.querySelector(".current-date");
+const daysTag = document.querySelector(".days");
+const prevNextIcon = document.querySelectorAll(".icons span");
+const entriesList = document.getElementById("entries");
 
 //Geting new date, current year and month
 let date = new Date(),
@@ -75,3 +76,25 @@ prevNextIcon.forEach((icon) => {
     renderCalender();
   });
 });
+
+function addEntryToDOM(entry) {
+  const listItem = document.createElement("li");
+  listItem.innerHTML += `<h4 class="entry-date">${entry.when}</h4>
+    <button class="entry-title">${entry.why}</button>`;
+  entriesList.insertBefore(listItem, entriesList.firstChild);
+  // Save the entire entriesList to localStorage
+  saveEntriesListToLocalStorage();
+}
+
+// Function to save the entire entriesList to localStorage
+function saveEntriesListToLocalStorage() {
+  const entriesList = document.getElementById("entries").innerHTML;
+  localStorage.setItem("entriesList", entriesList);
+}
+
+// Retrieve and parse the JSON from localStorage
+const json = localStorage.getItem("form");
+const entry = JSON.parse(json);
+
+// Add the initial entry
+addEntryToDOM(entry);

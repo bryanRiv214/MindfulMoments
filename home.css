@@ -8,7 +8,9 @@ body {
     align-items: center;
     min-height: 100vh;
 }
-
+.active{
+    font-weight:700;
+  }
 header {
     display: flex;
     justify-content: space-between;
@@ -46,10 +48,6 @@ nav ul li:last-child {
 nav ul li a {
     text-decoration: none;
     color: black;
-}
-
-.active{
-    font-weight:700;
 }
 
 .feeling-today-section {
