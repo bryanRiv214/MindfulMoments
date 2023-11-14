@@ -3,7 +3,6 @@ body {
   background-color: #ebd8d0;
   margin: 0;
   padding-top: 80px;
-  /* Adjust based on the height of your header */
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -20,6 +19,10 @@ header {
   position: fixed;
   top: 0;
   z-index: 1000;
+}
+
+.active{
+  font-weight:700;
 }
 
 .mindful-moments {
@@ -55,6 +58,7 @@ section{
 
 .wrapper {
   width: 450px;
+  margin-right:10px;
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
@@ -147,29 +151,12 @@ section{
   background: #f2f2f2;
 }
 
-/* Add a media query for smaller screens */
-@media screen and (max-width: 600px) {
-  .wrapper {
-    margin: auto;
-    width: 350px;
-  }
-
-  section {
-    flex-direction: column;
-    /* Center items horizontally on smaller screens */
-  }
-
-  .recent-entries {
-    margin-top: 40px;
-  }
-}
-
 
 .recent-entries #title {
   text-align: center;
 }
 
-.entries{
+#entries{
 list-style: none;
 padding:0px;
 }
@@ -239,4 +226,26 @@ padding:0px;
 
 .entry-date{
   text-align: center;
+}
+
+/* Add a media query for smaller screens */
+@media screen and (max-width: 1000px) {
+  .wrapper {
+    margin: auto;
+    width: 350px;
+  }
+
+  section {
+    flex-direction: column;
+    /* Center items horizontally on smaller screens */
+  }
+
+  .recent-entries {
+    margin-top: 40px;
+  }
+
+  .entry-title {
+    margin-left: 20px;
+    width: 90%;
+  }
 }

@@ -8,7 +8,9 @@ body {
     align-items: center;
     min-height: 100vh;
 }
-
+.active{
+    font-weight:700;
+  }
 header {
     display: flex;
     justify-content: space-between;

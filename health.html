@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Standard HTML5 document metadata -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="home.css"> <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="health.css">
+    <title>health</title>
+</head>
+
+<body>
+    <header>
+        <!-- Site header with a title and navigation menu -->
+        <h1 class="mindful-moments">Mindful Moments</h1>
+        <nav>
+            <!-- Navigation menu with links to other pages -->
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="journal.html">Journal</a></li>
+                <li class="active"><a href="health.html">Health</a></li>
+                <li><a href="login.html">Log Out</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <h1>Input Health Information</h1>
+        <h2>
+        <label for="appt">Choose a time for a reminder for your medication:</label>
+        <input type="time" id="remind" name="remind" min="09:00" max="18:00" />
+ 
+        </h2>
+<br/>
+
+        <form id="heatlh-form">
+            <label class="container1">Have you taken your meds?
+                <input type="checkbox" >
+                <span class="checkmark"></span>
+              </label>
+              
+              <label class="container1">Did you work out today?
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+              
+              <label class="container1">Have you drank water today?
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+              
+              <label class="container1">Did you sleep early?
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+
+<br/>
+<button type="submit" id="submit">Submit</button>
+
+        </form>
+   
+
+    </section>
+</body>
+
+</html>
