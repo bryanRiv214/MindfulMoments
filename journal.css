@@ -1,0 +1,251 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #ebd8d0;
+  margin: 0;
+  padding-top: 80px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #FEF6E4;
+  padding: 10px 30px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+.active{
+  font-weight:700;
+}
+
+.mindful-moments {
+  font-size: 24px;
+  color: black;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li:last-child {
+  margin-right: 60px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+section{
+  display: flex;
+  justify-content:space-evenly;
+  margin-top: 40px;
+}
+
+.wrapper {
+  width: 450px;
+  margin-right:10px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+.wrapper .header {
+  display: flex;
+  align-items: center;
+  padding: 25px 30px 10px;
+  justify-content: space-between;
+}
+.header .icons {
+  display: flex;
+}
+.header .icons span {
+  height: 38px;
+  width: 38px;
+  margin: 0 1px;
+  cursor: pointer;
+  color: #878787;
+  text-align: center;
+  line-height: 38px;
+  font-size: 1.9rem;
+  user-select: none;
+  border-radius: 50%;
+}
+.icons span:last-child {
+  margin-right: -10px;
+}
+.header .icons span:hover {
+  background: #f2f2f2;
+}
+.header .current-date {
+  font-size: 1.45rem;
+  font-weight: 500;
+}
+.calendar {
+  padding: 20px;
+}
+.calendar ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  text-align: center;
+}
+.calendar .days {
+  margin-bottom: 20px;
+  padding-left: 0px;
+}
+
+.calendar .weeks{
+  padding-left: 0px;
+}
+.calendar li {
+  color: #333;
+  width: calc(100% / 7);
+  font-size: 1.07rem;
+}
+.calendar .weeks li {
+  font-weight: 500;
+  cursor: default;
+}
+.calendar .days li {
+  z-index: 1;
+  cursor: pointer;
+  position: relative;
+  margin-top: 30px;
+}
+.days li.inactive {
+  color: #aaa;
+}
+.days li.active {
+  color: #fff;
+}
+.days li::before {
+  position: absolute;
+  content: "";
+  left: 50%;
+  top: 50%;
+  height: 40px;
+  width: 40px;
+  z-index: -1;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+.days li.active::before {
+  background: #9b59b6;
+}
+.days li:not(.active):hover::before {
+  background: #f2f2f2;
+}
+
+
+.recent-entries #title {
+  text-align: center;
+}
+
+#entries{
+list-style: none;
+padding:0px;
+}
+
+.entry-title{
+  margin-left: 0px;
+  width: 100%;
+}
+
+.entry-title {
+  appearance: none;
+  background-color: #FAFBFC;
+  border: 1px solid rgba(27, 31, 35, 0.15);
+  border-radius: 6px;
+  box-shadow: rgba(27, 31, 35, 0.04) 0 1px 0, rgba(255, 255, 255, 0.25) 0 1px 0 inset;
+  box-sizing: border-box;
+  color: #24292E;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  list-style: none;
+  padding: 6px 16px;
+  position: relative;
+  transition: background-color 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+  word-wrap: break-word;
+  width: 500px;
+}
+
+.entry-title:hover {
+  background-color: #F3F4F6;
+  text-decoration: none;
+  transition-duration: 0.1s;
+}
+
+.entry-title:disabled {
+  background-color: #FAFBFC;
+  border-color: rgba(27, 31, 35, 0.15);
+  color: #959DA5;
+  cursor: default;
+}
+
+.entry-title:active {
+  background-color: #EDEFF2;
+  box-shadow: rgba(225, 228, 232, 0.2) 0 1px 0 inset;
+  transition: none 0s;
+}
+
+.entry-title:focus {
+  outline: 1px transparent;
+}
+
+.entry-title:before {
+  display: none;
+}
+
+.entry-title:-webkit-details-marker {
+  display: none;
+}
+
+.entry-date{
+  text-align: center;
+}
+
+/* Add a media query for smaller screens */
+@media screen and (max-width: 1000px) {
+  .wrapper {
+    margin: auto;
+    width: 350px;
+  }
+
+  section {
+    flex-direction: column;
+    /* Center items horizontally on smaller screens */
+  }
+
+  .recent-entries {
+    margin-top: 40px;
+  }
+
+  .entry-title {
+    margin-left: 20px;
+    width: 90%;
+  }
+}

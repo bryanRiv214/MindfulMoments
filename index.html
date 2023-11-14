@@ -1,36 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mindful Moments - Health Conditions</title>
-  <!-- Link to the external CSS file for styling -->
-  <link rel="stylesheet" href="styles.css">
+	<!-- Standard HTML5 document metadata -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css"> <!-- Link to external CSS file -->
+    <title>Home</title>
 </head>
 <body>
-  <!-- Main container for content -->
-  <div class="container">
-    <h1>Mindful Moments</h1>
-    <p>Please enter any underlying health conditions one at a time:</p>
-    
-	<!-- Form for entering health conditions -->
-    <form id="healthForm">
-	  <!-- Input for health condition -->
-      <input type="text" id="healthCondition" name="healthCondition" placeholder="Enter a condition and click add..." />
-	  <!-- Button to add the health condition -->
-      <button type="submit">Add Condition</button>
-    </form>
+    <header>
+		<!-- Site header with a title and navigation menu -->
+        <h1 class="mindful-moments">Mindful Moments</h1>
+        <nav>
+			<!-- Navigation menu with links to other pages -->
+            <ul>
+                <li class="active"><a href="index.html">Home</a></li>
+                <li><a href="journal.html">Journal</a></li>
+                <li><a href="health.html">Health</a></li>
+                <li><a href="login.html">Log Out</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <!-- Container for displaying entered health conditions -->
-    <!-- Initially hidden until conditions are added -->
-    <div id="conditionsDisplay" class="conditions-box hidden">
-      <h2>Your Conditions:</h2>
-	  <!-- List where user conditions will be displayed -->
-      <ul id="userConditions"></ul>
+    <section class="feeling-today-section">
+		<!-- Section asking how the user is feeling today -->
+        <h2 class="feeling-today">How are you feeling today?</h2>
+    </section>
+
+    <div class="container">
+		<!-- Form container for user input -->
+        <form id="entry-form">
+            <div class="input-group">
+				<!-- Group of event buttons for user to select -->
+                <label for="cause">What happened?</label>
+                <div id="cause" name="cause">
+                    <button type="button" id="anxiety" name="event" value="Anxiety">Anxiety</button>
+                    <button type="button" id="panic-attack" name="event" value="Panic Attack">Panic Attack</button>
+                    <button type="button" id="dissociation" name="event" value="Dissociation">Dissociation</button>
+                    <button type="button" id="add-more" name="event">+</button>
+                </div>
+            </div>
+			
+			<!-- Input fields for various aspects of the user's experience -->
+
+            <div class="input-group">
+                <label for="when">When?</label>
+                <input type="date" id="when" name="when">
+            </div>
+
+            <div class="input-group">
+                <label for="why">Why?</label>
+                <input type="text" id="why" name="why">
+            </div>
+
+            <div class="input-group">
+                <label for="helped">What Helped?</label>
+                <input type="text" id="helped" name="helped">
+            </div>
+
+            <div class="input-group">
+                <label for="more-info">More Info?</label>
+                <input type="text" id="more-info" name="more-info">
+            </div>
+
+			<!-- Form submission button -->
+            <button type="submit" id="submit">Submit</button>
+        </form>
     </div>
-  </div>
-
-  <!-- Link to the JavaScript file for interactivity -->
-  <script src="script.js"></script>
+	
+	<div id="custom-alert" class="custom-alert">This is a custom alert message.</div>
+	
+	<!-- Link to external JavaScript file -->
+	<script src="index.js"></script>
 </body>
 </html>
