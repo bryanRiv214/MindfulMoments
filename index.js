@@ -17,7 +17,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Add an event listener to the form for 'submit' events
   form.addEventListener("submit", function (event) {
-    // Check if any of the event buttons are selected (have the 'active' class)
+    event.preventDefault();
+    // Check  if any of the event buttons are selected (have the 'active' class)
     const isSelectedButton = form.querySelector('button[name="event"].active');
     const isSelected = isSelectedButton ? isSelectedButton.value : "";
     // Check if all the text input fields, except the 'more-info' field, are filled out
@@ -47,6 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const json = JSON.stringify(obj);
       localStorage.setItem("form", json);
+      window.location.href = 'journal.html';
     }
 
     // Add any additional logic here for when the form passes validation
