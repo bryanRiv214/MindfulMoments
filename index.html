@@ -1,82 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<!-- Standard HTML5 document metadata -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css"> <!-- Link to external CSS file -->
+  <head>
+    <!-- Standard HTML5 document metadata -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <!-- Link to external CSS file -->
     <title>Home</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-		<!-- Site header with a title and navigation menu -->
-        <h1 class="mindful-moments">Mindful Moments</h1>
-        <nav>
-			<!-- Navigation menu with links to other pages -->
-            <ul>
-                <li class="active"><a href="index.html">Home</a></li>
-                <li><a href="journal.html">Journal</a></li>
-                <li><a href="health.html">Health</a></li>
-                <li><a href="login.html">Log Out</a></li>
-            </ul>
-        </nav>
+      <!-- Site header with a title and navigation menu -->
+      <h1 class="mindful-moments">Mindful Moments</h1>
+      <nav>
+        <!-- Navigation menu with links to other pages -->
+        <ul>
+          <li class="active"><a href="index.html">Home</a></li>
+          <li><a href="journal.html">Journal</a></li>
+          <li><a href="health.html">Health</a></li>
+          <li><a href="login.html">Log Out</a></li>
+        </ul>
+      </nav>
     </header>
 
     <section class="feeling-today-section">
-		<!-- Section asking how the user is feeling today -->
-        <h2 class="feeling-today">How are you feeling today?</h2>
+      <!-- Section asking how the user is feeling today -->
+      <h2 class="feeling-today">How are you feeling today?</h2>
     </section>
 
     <div class="container">
-		<!-- Form container for user input -->
-        <form id="entry-form">
-            <div class="input-group">
-                <label for="cause">What happened?</label>
-                <div id="cause" name="cause">
-                  <button type="button" id="addCategoryButton">Add Category</button>
-                </div>
-              </div>
-			
-			<!-- Input fields for various aspects of the user's experience -->
+      <!-- Form container for user input -->
+      <form id="entry-form">
+        <div class="input-group">
+          <label for="cause">What happened?</label>
+          <div id="cause" name="cause">
+            <button type="button" id="addCategoryButton">Add Category</button>
+          </div>
+        </div>
 
-            <div class="input-group">
-                <label for="when">When?</label>
-                <input type="date" id="when" name="when">
-            </div>
+        <!-- Input fields for various aspects of the user's experience -->
 
-            <div class="input-group">
-                <label for="why">Why?</label>
-                <input type="text" id="why" name="why">
-            </div>
+        <div class="input-group">
+          <label for="when">When?</label>
+          <input type="date" id="when" name="when" />
+        </div>
 
-            <div class="input-group">
-                <label for="helped">What Helped?</label>
-                <input type="text" id="helped" name="helped">
-            </div>
+        <div class="input-group">
+          <label for="why">Why?</label>
+          <input type="text" id="why" name="why" />
+        </div>
 
-            <div class="input-group">
-                <label for="more-info">More Info?</label>
-                <input type="text" id="more-info" name="more-info">
-            </div>
+        <div class="input-group">
+          <label for="helped">What Helped?</label>
+          <input type="text" id="helped" name="helped" />
+        </div>
 
-			<!-- Form submission button -->
-            <button type="submit" id="submit">Submit</button>
-        </form>
+        <div class="input-group">
+          <label for="more-info">More Info?</label>
+          <input type="text" id="more-info" name="more-info" />
+        </div>
+
+        <!-- Form submission button -->
+        <button type="submit" id="submit">Submit</button>
+      </form>
     </div>
-    
-	<div id="custom-alert" class="custom-alert">This is a custom alert message.</div>
-	
+
+    <div id="custom-alert" class="custom-alert">
+      This is a custom alert message.
+    </div>
+
     <!-- The Modal -->
-<div id="myModal" class="modal">
-    <!-- Modal content -->
-    <div class="modal-content">
-      <span id="cancelButton" class="close">&times;</span>
-      <label for="newCategoryInput">New Category:</label>
-      <input type="text" id="newCategoryInput" />
-      <button id="addCategoryButton">Add Category</button>
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span id="cancelButton" class="close">&times;</span>
+        <label for="newCategoryInput">New Category:</label>
+        <input type="text" id="newCategoryInput" />
+        <button id="addCategoryButton">Add Category</button>
+      </div>
     </div>
-  </div>
-	<!-- Link to external JavaScript file -->
-	<script src="index.js"></script>
-</body>
+    <!-- Link to external JavaScript file -->
+    <script src="index.js"></script>
+  </body>
 </html>
