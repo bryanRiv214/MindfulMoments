@@ -31,15 +31,11 @@
 		<!-- Form container for user input -->
         <form id="entry-form">
             <div class="input-group">
-				<!-- Group of event buttons for user to select -->
                 <label for="cause">What happened?</label>
                 <div id="cause" name="cause">
-                    <button type="button" id="anxiety" name="event" value="Anxiety">Anxiety</button>
-                    <button type="button" id="panic-attack" name="event" value="Panic Attack">Panic Attack</button>
-                    <button type="button" id="dissociation" name="event" value="Dissociation">Dissociation</button>
-                    <button type="button" id="add-more" name="event">+</button>
+                  <button type="button" id="addCategoryButton">Add Category</button>
                 </div>
-            </div>
+              </div>
 			
 			<!-- Input fields for various aspects of the user's experience -->
 
@@ -67,9 +63,19 @@
             <button type="submit" id="submit">Submit</button>
         </form>
     </div>
-	
+    
 	<div id="custom-alert" class="custom-alert">This is a custom alert message.</div>
 	
+    <!-- The Modal -->
+<div id="myModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span id="cancelButton" class="close">&times;</span>
+      <label for="newCategoryInput">New Category:</label>
+      <input type="text" id="newCategoryInput" />
+      <button id="addCategoryButton">Add Category</button>
+    </div>
+  </div>
 	<!-- Link to external JavaScript file -->
 	<script src="index.js"></script>
 </body>
