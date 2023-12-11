@@ -66,8 +66,8 @@
   .active{
     font-weight:700;
   }
-  #heatlh-form #submit {
-    background-color: pink;
+  #health-form #submit {
+    background-color: #e18891;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -76,4 +76,8 @@
     display: block; /* Makes the button a block element */
     margin: 20px auto; /* Centers the button horizontally with automatic margins */
     width: auto; /* Adjust width as needed, or set a specific width */
+}
+#health-form #submit:hover {
+  transition: .5s;
+  background-color: #e1b6ba;
 }
